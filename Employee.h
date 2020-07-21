@@ -2,6 +2,7 @@
 #define SDDS_EMPLOYEE_H
 #include <iostream>
 
+
 namespace sdds
 {
 	class Employee
@@ -21,6 +22,7 @@ namespace sdds
 		
 		// a custom constructor that receives as parameters the hourly salary and the minimum number of hours the employee must work in a week.
 		
+		// PURE VIRTUAL FUNCTIONS:
 		double getSalary(int workedHours);
 			// a **pure virtual query** that calculates the salary earned by the employee during a week in which she worked the number of hours specified in the parameter.  Each type of employee will use a different formula to calculate salary.
 
