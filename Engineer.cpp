@@ -12,7 +12,6 @@ namespace sdds {
 	double Engineer::getSalary(int workedHours) const {
 		int min_hours = Employee::getHours();
 		double pay_rate = Employee::getRate();
-
 		double result = (double)workedHours * pay_rate;
 
 		for (int i = 0; i < m_level; i++) {
@@ -22,15 +21,15 @@ namespace sdds {
 		if (workedHours < min_hours) {
 			result -= (result * .2);
 		}
-		
+
 		return result;
 	};
 
 	ostream& Engineer::display(ostream& out) const {
-		out << setw(20) << "Engineer" << endl
-			<< right << "Level: " << m_level << endl
-			<< "Pay Rate: " << Employee::getRate() << endl
-			<< "Min Hours: " << Employee::getHours() << endl;
+		out << "Engineer" << endl
+			<< setw(20) << right << "Level: " << m_level << endl
+			<< setw(20) << right << "Pay Rate: " << Employee::getRate() << endl
+			<< setw(20) << right << "Min Hours: " << Employee::getHours() << endl;
 		return out;
 	};
 }

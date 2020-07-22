@@ -17,5 +17,4 @@ namespace sdds {
 	};
 	std::ostream& operator<<(std::ostream& out, const Employee& emp); // duplicates display but not a member of the class!
 }
-
 #endif
