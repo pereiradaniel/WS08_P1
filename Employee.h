@@ -13,6 +13,9 @@ namespace sdds
 	// #### `Employee` Protected Members
 			
 		// two queries to retrieve the values of the two attributes(minimum working hours and hourly salary).
+		int getHours() const;
+
+		double getRate() const;
 
 	public:
 	// #### `Employee` Public Members
@@ -26,7 +29,7 @@ namespace sdds
 		double getSalary(int workedHours);
 			// a **pure virtual query** that calculates the salary earned by the employee during a week in which she worked the number of hours specified in the parameter.  Each type of employee will use a different formula to calculate salary.
 
-		std::ostream& display(ostream& out);
+		std::ostream& display(std::ostream& out);
 			// a **pure virtual query** that inserts into the stream the representation of the current instance. Each type of employee has different data to print.
 			// The parameter will have `std::cout` as a default value.
 		

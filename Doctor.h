@@ -17,7 +17,8 @@ namespace sdds
 	public:
 	// #### `Doctor` Public Members
 
-		// a custom constructor that receives as parameters the type of doctor, the hourly salary, minimum numbers of hours the doctor must work in a week, and a value signaling if the doctor is a specialist.The last parameter should have a default value of `false`.
+		Doctor(char* type, double rate, int hours, bool is_specialist);
+			// a custom constructor that receives as parameters the type of doctor, the hourly salary, minimum numbers of hours the doctor must work in a week, and a value signaling if the doctor is a specialist.The last parameter should have a default value of `false`.
 
 		double getSalary(int workedHours);
 			// overrides the base class function.
