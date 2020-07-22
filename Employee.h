@@ -2,14 +2,13 @@
 #define SDDS_EMPLOYEE_H
 #include <iostream>
 
-
 namespace sdds
 {
 	class Employee
 	{
 	// #### `Employee` Private Members
-		const int MIN_WEEKLY_HOURS;	// a **constant** integer representing the minimum number of hours an employee must work in a week.
-		double hourly_salary;		// a number representing the hourly salary of the employee, as a floating point number in double precision.
+		const int min_hours;	// a **constant** integer representing the minimum number of hours an employee must work in a week.
+		double pay_rate;		// a number representing the hourly salary of the employee, as a floating point number in double precision.
 
 	// #### `Employee` Protected Members
 			
@@ -20,8 +19,9 @@ namespace sdds
 
 		// This class will** NOT** have a default constructor!
 		
-		// a custom constructor that receives as parameters the hourly salary and the minimum number of hours the employee must work in a week.
-		
+		Employee(int hours, double rate);
+			// a custom constructor that receives as parameters the hourly salary and the minimum number of hours the employee must work in a week.
+
 		// PURE VIRTUAL FUNCTIONS:
 		double getSalary(int workedHours);
 			// a **pure virtual query** that calculates the salary earned by the employee during a week in which she worked the number of hours specified in the parameter.  Each type of employee will use a different formula to calculate salary.
@@ -30,6 +30,7 @@ namespace sdds
 			// a **pure virtual query** that inserts into the stream the representation of the current instance. Each type of employee has different data to print.
 			// The parameter will have `std::cout` as a default value.
 		
+		virtual ~Employee();
 			// a **virtual**, empty-body, destructor.
 	};
 

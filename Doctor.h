@@ -1,3 +1,4 @@
+// Concreate Class
 #ifndef SDDS_DOCTOR_H
 #define SDDS_DOCTOR_H
 #include <iostream>
@@ -46,10 +47,6 @@ namespace sdds
 
 					The labels should be printed on a field of size 16, aligned to the right.
 			*/
-
 	};
-
-
 }
-
 #endif
